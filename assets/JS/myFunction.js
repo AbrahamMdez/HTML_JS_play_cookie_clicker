@@ -9,12 +9,12 @@ const click = () => {
     cookies++; 
 };
 
-const buyMoreCookies = object => {
-    if( cookies >= cookiesPrice[object] ) {
-        cookiesAmounth[object]++;
-    } 
+const buyMoreCookies = Object => {
+    //if( cookies >= cookiesPrice[Object] ) {
+        cookiesAmounth[Object]++;
+    //} 
     
-    return 'You don´t have enough money';
+    //return 'You don´t have enough money';
 };
 
 const createCookies = () => {
@@ -32,9 +32,9 @@ const render = () => {
 };
 
 document.querySelector('#cookie-image').onclick = click;
-document.querySelector('#btn-cursor').onclick = buyMoreCookies[0];
-document.querySelector('#btn-granma').onclick = buyMoreCookies[1];
-document.querySelector('#btn-oven').onclick = buyMoreCookies[2];
+document.querySelector('#btn-cursor').onclick = buyMoreCookies(0);
+document.querySelector('#btn-granma').onclick = buyMoreCookies(1);
+document.querySelector('#btn-oven').onclick = buyMoreCookies(2);
 
 //PARA RENDERIZAR VISTAS A LA VELOCIDAD QUE LE DIGAMOS
 const FPS = 10;
