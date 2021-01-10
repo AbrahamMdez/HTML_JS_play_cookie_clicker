@@ -9,9 +9,9 @@ const click = () => {
     cookies++; 
 };
 
-const buyMoreCookies = Object => {
-    if( cookies >= cookiesPrice[Object] ) {
-        cookiesAmounth[Object]++;
+const buyMoreCookies = object => {
+    if( cookies >= cookiesPrice[object] ) {
+        cookiesAmounth[object]++;
     } 
     
     return 'You don´t have enough money';
@@ -40,5 +40,6 @@ document.querySelector('#btn-oven').onclick = buyMoreCookies[2];
 const FPS = 10;
 
 setInterval(() => {
+    createCookies();
     render();
 }, 1000/FPS);
